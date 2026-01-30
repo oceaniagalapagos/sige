@@ -1,0 +1,11 @@
+
+CREATE TABLE ubicaciones (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  nombre_ubicacion TEXT NOT NULL,
+  descripcion TEXT,
+  is_activo BOOLEAN DEFAULT 1,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+ALTER TABLE puertos ADD COLUMN id_ubicacion INTEGER;

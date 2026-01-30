@@ -1,0 +1,11 @@
+
+CREATE TABLE tipos_transporte (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+nombre_tipo TEXT NOT NULL,
+descripcion TEXT,
+is_activo BOOLEAN DEFAULT 1,
+created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+ALTER TABLE barcos ADD COLUMN id_tipo_transporte INTEGER;

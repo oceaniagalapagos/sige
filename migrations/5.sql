@@ -1,0 +1,10 @@
+
+CREATE TABLE barcos (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  nombre_barco TEXT NOT NULL,
+  capacidad_peso REAL,
+  capacidad_volumen REAL,
+  is_activo BOOLEAN DEFAULT 1,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);

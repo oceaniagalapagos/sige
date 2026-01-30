@@ -1,0 +1,11 @@
+
+CREATE TABLE puertos (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  nombre_puerto TEXT NOT NULL,
+  isla TEXT NOT NULL,
+  is_activo BOOLEAN DEFAULT 1,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_puertos_isla ON puertos(isla);
