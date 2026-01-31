@@ -1,0 +1,17 @@
+<?php
+// config.php
+
+// Database credentials
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'sige');
+
+// Optional: You can also establish the connection here and store it in a variable
+// for example, using MySQLi Procedural style:
+$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+// if (!$conn) {
+//     die("Connection failed: " . mysqli_connect_error());
+// }
+

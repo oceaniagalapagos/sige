@@ -25,13 +25,11 @@ export default function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/auth/callback" element={<AuthCallbackPage />} />
+          <Route path="/auth" element={<AuthCallbackPage />} />
           <Route
             path="/dashboard"
             element={
-              <ProtectedRoute>
-                <DashboardPage />
-              </ProtectedRoute>
+              <DashboardPage />
             }
           />
           <Route

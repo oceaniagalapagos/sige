@@ -1,6 +1,6 @@
 import { useAuth } from "@getmocha/users-service/react";
 import { useEffect } from "react";
-import { useNavigate } from "react-router";
+import { redirect, useNavigate } from "react-router";
 import { Package, Calendar, Settings } from "lucide-react";
 
 export default function Home() {
@@ -17,14 +17,17 @@ export default function Home() {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-emerald-600 via-teal-600 to-blue-700">
         <div className="animate-pulse">
-          <img 
-            src="https://019b3aba-9218-7379-898e-b7b8fbf96367.mochausercontent.com/Logo-CarapachusLogistic2.png" 
-            alt="Loading" 
+          <img
+            src="https://019b3aba-9218-7379-898e-b7b8fbf96367.mochausercontent.com/Logo-CarapachusLogistic2.png"
+            alt="Loading"
             className="w-24 h-24 sm:w-32 sm:h-32 object-contain"
           />
         </div>
       </div>
     );
+  }
+
+  const test = function () {
   }
 
   return (
@@ -34,9 +37,9 @@ export default function Home() {
           {/* Header */}
           <div className="text-center mb-8 sm:mb-16">
             <div className="flex items-center justify-center mb-6 sm:mb-8">
-              <img 
-                src="https://019b3aba-9218-7379-898e-b7b8fbf96367.mochausercontent.com/Logo-CarapachusLogistic2.png" 
-                alt="Carapachus Logistic" 
+              <img
+                src="https://019b3aba-9218-7379-898e-b7b8fbf96367.mochausercontent.com/Logo-CarapachusLogistic2.png"
+                alt="Carapachus Logistic"
                 className="h-20 sm:h-32 w-auto object-contain"
                 style={{ filter: 'drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))' }}
               />
@@ -50,12 +53,11 @@ export default function Home() {
             <p className="text-sm sm:text-lg text-white/90 mb-6 sm:mb-10 max-w-2xl mx-auto px-4">
               Sistema integral de gestión de entregas a las Islas Galápagos
             </p>
-            <button
-              onClick={redirectToLogin}
+            <a href="/auth"
               className="px-6 sm:px-10 py-3 sm:py-4 bg-white text-emerald-700 rounded-lg font-bold text-base sm:text-lg hover:bg-emerald-50 transition-all shadow-2xl hover:shadow-emerald-900/50 transform hover:-translate-y-1 hover:scale-105"
             >
               Iniciar Sesión con Google
-            </button>
+            </a>
           </div>
 
           {/* Features */}
